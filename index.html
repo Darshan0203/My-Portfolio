@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Darshan | Portfolio</title>
+
+  <meta name="description" content="Darshan — Developer Portfolio. Web, Android, AI Projects." />
+  <meta name="theme-color" content="#0b0f19" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Glow Cursor -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- NAV -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a class="brand" href="#home">
+        <span class="brand-mark"></span>
+        <span class="brand-name">Darshan</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a class="nav-link active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#testimonials">Testimonials</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">🌙</button>
+        <button class="icon-btn mobile-menu" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-left reveal">
+        <div class="hero-pill">
+          <span class="dot"></span>
+          Available for internships & freelancing
+        </div>
+
+        <h1 class="hero-title">
+          Building <span class="grad">premium digital products</span><br/>
+          with clean UI & strong backend.
+        </h1>
+
+        <p class="hero-desc">
+          I’m <b>Darshan</b>, a developer focused on crafting
+          modern Web, Android, and AI systems — optimized for speed,
+          clarity, and scalability.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn primary magnetic" href="#projects">Explore Work</a>
+          <a class="btn outline magnetic" href="#contact">Let’s Talk</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <h3>15+</h3>
+            <p>Projects</p>
+          </div>
+          <div class="stat">
+            <h3>3</h3>
+            <p>Domains</p>
+          </div>
+          <div class="stat">
+            <h3>100%</h3>
+            <p>Consistency</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <p class="mini">Developer Profile</p>
+            <span class="badge">AI + Web + Android</span>
+          </div>
+
+          <div class="profile">
+            <img class="profile-img" src="assets/profile.jpg" alt="Profile image"
+                 onerror="this.style.display='none'; document.querySelector('.profile-fallback').style.display='grid';" />
+            <div class="profile-fallback">DP</div>
+
+            <div class="profile-info">
+              <h3>Darshan Panchal</h3>
+              <p>Frontend + Backend + AI Systems</p>
+            </div>
+          </div>
+
+          <div class="hero-mini-grid">
+            <div class="mini-card">
+              <p class="mini-label">Fast</p>
+              <p class="mini-value">Performance-first</p>
+            </div>
+            <div class="mini-card">
+              <p class="mini-label">Clean</p>
+              <p class="mini-value">Modern UI</p>
+            </div>
+            <div class="mini-card">
+              <p class="mini-label">Scalable</p>
+              <p class="mini-value">Production ready</p>
+            </div>
+            <div class="mini-card">
+              <p class="mini-label">Smart</p>
+              <p class="mini-value">AI integration</p>
+            </div>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/Darshan0203" class="chip magnetic">GitHub</a>
+            <a href="https://www.linkedin.com/in/darshan-panchal-9929162a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="chip magnetic">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section container" id="about">
+      <div class="section-head reveal">
+        <h2 class="section-title">About</h2>
+        <p class="section-subtitle">
+          I build polished applications that look expensive, feel smooth, and scale well.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="glass-card reveal">
+          <h3>Why you should hire me</h3>
+          <p>
+            I blend <b>design</b> and <b>engineering</b> — meaning I don’t just code,
+            I craft the full experience. From UI/UX to backend architecture, I ship products.
+          </p>
+        </div>
+
+        <div class="glass-card reveal">
+          <h3>My focus areas</h3>
+          <ul class="checklist">
+            <li>UI Engineering (Modern & Responsive)</li>
+            <li>Android Apps (Firebase / Supabase)</li>
+            <li>AI Assistants & Chatbots (Multi-agent)</li>
+            <li>Database Projects (DBMS / MySQL)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section container" id="skills">
+      <div class="section-head reveal">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">Tools I use to build high-quality products.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill reveal"><span>HTML</span><small>Semantic</small></div>
+        <div class="skill reveal"><span>CSS</span><small>Premium UI</small></div>
+        <div class="skill reveal"><span>JavaScript</span><small>Modern</small></div>
+        <div class="skill reveal"><span>React</span><small>Frontend</small></div>
+        <div class="skill reveal"><span>Node</span><small>Backend</small></div>
+        <div class="skill reveal"><span>Firebase</span><small>Auth & DB</small></div>
+        <div class="skill reveal"><span>Python</span><small>Automation</small></div>
+        <div class="skill reveal"><span>MySQL</span><small>DBMS</small></div>
+        <div class="skill reveal"><span>Flutter</span><small>Cross-platform</small></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section container" id="projects">
+      <div class="section-head reveal">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">
+          A selection of my most impactful builds.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project reveal" data-project="ai-support">
+          <div class="project-top">
+            <h3>AI Customer Support</h3>
+            <span class="tag">AI</span>
+          </div>
+          <p>Multi-agent AI support system that answers users and routes queries intelligently.</p>
+          <div class="tags">
+            <span>JavaScript</span><span>Agents</span><span>LLM</span>
+          </div>
+          <button class="btn small outline magnetic open-project">View Case Study</button>
+        </article>
+
+        <article class="project reveal" data-project="voting-system">
+          <div class="project-top">
+            <h3>Online Voting System</h3>
+            <span class="tag">DBMS</span>
+          </div>
+          <p>Secure voting system with robust database design and admin controls.</p>
+          <div class="tags">
+            <span>MySQL</span><span>PHP</span><span>Security</span>
+          </div>
+          <button class="btn small outline magnetic open-project">View Case Study</button>
+        </article>
+
+        <article class="project reveal" data-project="quiz-app">
+          <div class="project-top">
+            <h3>INTUS Emotion prediction App</h3>
+            <span class="tag">Android</span>
+          </div>
+          <p></p>
+          <div class="tags">
+            <span>Dart</span><span>UI</span><span>Mini-project</span>
+          </div>
+          <button class="btn small outline magnetic open-project">View Case Study</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section container" id="testimonials">
+      <div class="section-head reveal">
+        <h2 class="section-title">Testimonials</h2>
+        <p class="section-subtitle">What people say about working with me.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="glass-card reveal">
+          <p class="quote">“Fast delivery + clean design. Very professional.”</p>
+          <div class="person">
+            <div class="avatar">A</div>
+            <div>
+              <h4>Akash</h4>
+              <p>classmate</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card reveal">
+          <p class="quote">“His UI looks premium. Projects are well structured.”</p>
+          <div class="person">
+            <div class="avatar">P</div>
+            <div>
+              <h4>Pratiksha Chandure</h4>
+              <p>Team Lead</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card reveal">
+          <p class="quote">“Best problem solver till now ”</p>
+          <div class="person">
+            <div class="avatar">A</div>
+            <div>
+              <h4>Akash</h4>
+              <p>classmate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section container" id="contact">
+      <div class="section-head reveal">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">Let’s build something great.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="glass-card reveal">
+          <h3>Let’s connect</h3>
+          <p class="muted">
+            Fill the form and I’ll respond quickly. This form includes validation & toast feedback.
+          </p>
+
+          <div class="contact-info">
+            <div class="info"><span>📩</span> panchaldarshan317@gmail.com</div>
+            <div class="info"><span>📍</span> India</div>
+            <div class="info"><span>📞</span> +91-9448462957</div>
+          </div>
+        </div>
+
+        <form class="glass-card form reveal" id="contactForm">
+          <div class="field">
+            <label>Name</label>
+            <input id="name" type="text" placeholder="Your full name" />
+          </div>
+
+          <div class="field">
+            <label>Email</label>
+            <input id="email" type="email" placeholder="you@example.com" />
+          </div>
+
+          <div class="field">
+            <label>Message</label>
+            <textarea id="message" rows="6" placeholder="Write your message..."></textarea>
+          </div>
+
+          <button class="btn primary magnetic" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>©️ <span id="year"></span> Darshan. All rights reserved.</p>
+        <a href="#home" class="to-top magnetic">Back to top ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- PROJECT MODAL -->
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <div class="modal-head">
+        <h3 id="modalTitle">Project Title</h3>
+        <button class="icon-btn" id="modalClose">✕</button>
+      </div>
+
+      <p class="modal-desc" id="modalDesc"></p>
+
+      <div class="modal-block">
+        <h4>Highlights</h4>
+        <ul id="modalList"></ul>
+      </div>
+
+      <div class="modal-actions">
+        <a class="btn outline magnetic" id="modalLive" href="#" target="_blank">Live</a>
+        <a class="btn primary magnetic" id="modalCode" href="#" target="_blank">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
