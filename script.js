@@ -198,18 +198,66 @@ function showToast(message) {
 }
 
 /* Contact Form Validation */
-const contactForm = $("#contactForm");
-contactForm.addEventListener("submit", (e) => {
+/* =========================
+   GOOGLE FORMS CONTACT FORM
+   ========================= */
+
+const contactForm = document.getElementById("contactForm");
+const sendBtn = document.getElementById("sendBtn");
+
+contactForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const name = $("#name").value.trim();
-  const email = $("#email").value.trim();
-  const msg = $("#message").value.trim();
+  // Get values
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
 
-  if (name.length < 2) return showToast("Enter a valid name (min 2 chars).");
+  // Validation
+  if (name.length < 2) return showToast("Enter a valid name.");
   if (!/^\S+@\S+\.\S+$/.test(email)) return showToast("Enter a valid email.");
-  if (msg.length < 10) return showToast("Message must be at least 10 characters.");
+  if (message.length < 10) return showToast("Message must be at least 10 characters.");
 
-  showToast("✅ Message sent successfully (demo).");
-  contactForm.reset();
+  // ✅ Your Google Form formResponse endpoint
+  const GOOGLE_FORM_ACTION_URL =
+    "https://docs.google.com/forms/d/e/1FAIpQLScTCYY0ZvNddqm6wRaZokRQFchR8nCjQU8Cm-TdNVv8UuPKTw/formResponse";
+
+  // ✅ Your Google Form entry IDs (from prefilled link)
+  const FORM_FIELDS = {
+    name: "entry.2003864831",
+    email: "entry.1372598023",
+    message: "entry.895534653"
+  };
+
+  // Create form data for Google Forms
+  const formData = new FormData();
+  formData.append(FORM_FIELDS.name, name);
+  formData.append(FORM_FIELDS.email, email);
+  formData.append(FORM_FIELDS.message, message);
+
+  // Button loading state
+  const oldText = sendBtn.textContent;
+  sendBtn.textContent = "Sending...";
+  sendBtn.disabled = true;
+
+  try {
+    /**
+     * Google Forms blocks CORS; so we use mode: "no-cors"
+     * This still submits successfully even though we can't read response.
+     */
+    await fetch(GOOGLE_FORM_ACTION_URL, {
+      method: "POST",
+      mode: "no-cors",
+      body: formData
+    });
+
+    showToast("✅ Message sent successfully!");
+    contactForm.reset();
+  } catch (err) {
+    console.error("Google Form Submit Error:", err);
+    showToast("❌ Failed to send. Please try again.");
+  } finally {
+    sendBtn.textContent = oldText;
+    sendBtn.disabled = false;
+  }
 });
